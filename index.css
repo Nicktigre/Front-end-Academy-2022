@@ -1,0 +1,300 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: rgb(245, 182, 9);
+    background-color: rgba(231, 174, 16, 0);
+}
+
+button:hover{
+    background-color: rgb(255, 205, 42);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{ color:rgb(10, 0, 143); }
+
+header{
+    background-color: rgb(252, 171, 22);
+    
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(201, 133, 7);
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/programando.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: rgb(255, 255, 255);
+}
+
+#hero h2{
+    color: rgb(62, 131, 125);
+}
+
+#soy-ben .container{
+    text-align: center;
+    padding: 200px 12px;
+    background-color: rgb(216, 207, 207);
+}
+
+#mi-cv{
+    background-color: rgb(30, 30, 30);
+    color: rgb(212, 214, 216);
+    text-align: center;
+}
+
+#mi-cv .container{
+    padding: 150px 12px;
+}
+
+#mi-cv h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#mi-cv p{
+    display: none;
+}
+
+#mi-cv .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/mini.webp");
+
+}
+
+#contacto .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#contacto li{
+    font-size: 2em;
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.842);
+    color: rgb(255, 255, 255);
+    height: 80vh;
+}
+
+#final h2{
+    font-size: 9vw;
+}
+
+#final button{
+    font-size: 5vw;
+}
+
+footer{
+    background-color: rgb(252, 171, 22);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(255, 211, 144);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 850px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #soy-ben .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #soy-ben .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #soy-ben h2{
+        margin-top: 0px;
+    }
+
+    #soy-ben .img-container{
+        background-repeat: no-repeat;
+        background-image: url("media/Ben.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 600px;
+        width: 500px; 
+    }
+
+    #mi-cv .servicios{
+        display: flex;
+        justify-content: center;
+    }
+
+    #mi-cv p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #mi-cv h2{
+        font-size: 4em;
+    }
+
+    #mi-cv h3{
+        margin-top: 0;
+    }
+
+    #contacto{
+        background-image: url("media/contacto.jpg");
+        background-repeat: no-repeat;
+        background-size: 600px 500px;
+        background-position: calc(100vw - 500px) 120px;
+    }
+
+    #contacto .container{
+        text-align: initial;
+    }
+
+    #contacto ul{
+        margin-left: 100px;
+    }
+
+    #extras .container{
+        text-align: center;
+        margin-left: 100px;
+        font-size: 2em;
+    }
+
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+@media (min-width: 1200px) {
+    #contacto{
+        background-position-x: calc(100vw - 800px);
+    }
+}
